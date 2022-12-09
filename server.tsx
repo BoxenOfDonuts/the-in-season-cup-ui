@@ -18,7 +18,7 @@ const handler = (req: Request) => html({
     <div
       class="text-center w-full bg-slate-900 h-screen pt-2 md:pt-12 p-2"
     >
-    <h1 class="text-7xl text-gray-200 mb-6">The In Season Cup</h1>
+    <h1 class="text-4xl md:text-7xl text-gray-200 mb-6">The In Season Cup</h1>
     <div class="text-blue-700 flex flex-col justify-center md:gap-12 md:flex-row">
       <section>
         <div class="flex justify-center -mb-8">
