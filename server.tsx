@@ -2,12 +2,12 @@
 import { serve } from "https://deno.land/std@0.155.0/http/server.ts";
 import html, { h } from "https://deno.land/x/htm/mod.ts";
 import UnoCSS from "https://deno.land/x/htm/plugins/unocss.ts";
+import { getScores } from "./db.js";
 
 // enable UnoCSS
 html.use(UnoCSS());
 
-const joelPoints = 35;
-const lianPoints = 24;
+const scores = await getScores();
 
 const handler = (req: Request) =>
   html({
@@ -28,7 +28,7 @@ const handler = (req: Request) =>
             <h1 class="text-9xl mb-4">
               Joel
             </h1>
-            <p class="text-blue-300 text-6xl">{joelPoints}</p>
+            <p class="text-blue-300 text-6xl">{scores.joel.points}</p>
           </section>
           <div class="flex flex-col justify-center">
             <h3 class="mt-10 text-6xl text-yellow-400">
@@ -45,7 +45,7 @@ const handler = (req: Request) =>
             <h1 class="text-9xl mb-4">
               Lian
             </h1>
-            <p class="text-blue-300 text-6xl">{lianPoints}</p>
+            <p class="text-blue-300 text-6xl">{scores.lian.points}</p>
           </section>
         </div>
       </div>
