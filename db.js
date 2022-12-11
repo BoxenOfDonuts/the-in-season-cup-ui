@@ -15,10 +15,14 @@ const db = getFirestore(firebaseApp);
 // probably do some tipescript lol
 
 export async function getScores() {
-  const docsRef = doc(db, "in-season-cup", "scores");
-  const docSnap = await getDoc(docsRef);
-  if (docSnap.exists()) {
-    return docSnap.data();
+  try {
+    const docsRef = doc(db, "in-season-cup", "scores");
+    const docSnap = await getDoc(docsRef);
+    if (docSnap.exists()) {
+      return docSnap.data();
+    }
+  } catch (error) {
+    console.error('Something went wrong', { error })
+    return { joel: { points: 0 }, lian: { points: 0 } };
   }
-  return { joel: { points: 0 }, lian: { points: 0 } };
 }
