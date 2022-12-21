@@ -8,6 +8,7 @@ import { getScores } from "./db.js";
 html.use(UnoCSS());
 
 const scores = await getScores();
+// const joel = scores.find((user) => user.name === "Joel");
 
 const handler = (req: Request) =>
   html({
@@ -26,9 +27,9 @@ const handler = (req: Request) =>
               <img src="https://img.icons8.com/color/96/null/fairytale.png" />
             </div>
             <h1 class="text-9xl mb-4">
-              Joel
+              { scores[0].name }
             </h1>
-            <p class="text-blue-300 text-6xl">{scores.joel.points}</p>
+            <p class="text-blue-300 text-6xl">{scores[0].points}</p>
           </section>
           <div class="flex flex-col justify-center">
             <h3 class="mt-10 text-6xl text-yellow-400">
@@ -43,9 +44,9 @@ const handler = (req: Request) =>
               />
             </div>
             <h1 class="text-9xl mb-4">
-              Lian
+              { scores[1].name }
             </h1>
-            <p class="text-blue-300 text-6xl">{scores.lian.points}</p>
+            <p class="text-blue-300 text-6xl">{scores[1].points}</p>
           </section>
         </div>
       </div>
