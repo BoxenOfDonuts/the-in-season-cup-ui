@@ -1,0 +1,20 @@
+<template>
+  <section>
+    <div class="flex justify-center -mb-8">
+      <img class="h-24 w-24" src="/images/crown-96.png" />
+    </div>
+    <h1 class="text-9xl mb-4">{{ user.name }}</h1>
+    <p class="text-blue-300 text-6xl">{{ user.points }}</p>
+  </section>
+</template>
+
+<script setup>
+defineProps({
+  user: {
+    type: Object,
+    default: () => {},
+  },
+});
+</script>
+
+<style scoped></style>

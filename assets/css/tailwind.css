@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-center w-full bg-slate-900 h-screen pt-2 md:pt-12 p-2;
+  }
+  
+  .router-link-exact-active {
+  }
+}
+
+
+@layer components {
+  .btn {
+    @apply bg-[#12b488] text-white px-3 py-2 rounded-md text-sm text-white;
+  }
+}
