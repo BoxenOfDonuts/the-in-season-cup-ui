@@ -1,6 +1,9 @@
 <template>
   <section>
-    <div class="flex justify-center -mb-8">
+    <div
+      class="flex justify-center -mb-7"
+      :class="{ 'hidden md:invisible md:block': !isLeader }"
+    >
       <img class="h-24 w-24" src="/images/crown-96.png" />
     </div>
     <h1 class="text-9xl mb-4">{{ user.name }}</h1>
@@ -13,6 +16,10 @@ defineProps({
   user: {
     type: Object,
     default: () => {},
+  },
+  isLeader: {
+    type: Boolean,
+    default: false,
   },
 });
 </script>

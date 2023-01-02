@@ -12,4 +12,7 @@ export default defineNuxtConfig({
       ],
     },
   },
+  runtimeConfig: {
+    firebaseConfig: process.env.FIREBASE_CONFIG || "{}",
+  },
 });

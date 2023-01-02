@@ -1,6 +1,12 @@
 <template>
   <div>
-    <h1 class="text-4xl md:text-7xl text-gray-200 mb-6">The In-Season Cup</h1>
+    <header class="shadow-sm bg-slate-800 mb-5">
+      <nav class="p-4 mx-auto md:flex md:justify-between">
+        <NuxtLink class="font-bold text-gray-200" to="/">
+          The In-Season Cup
+        </NuxtLink>
+      </nav>
+    </header>
     <slot />
   </div>
 </template>
