@@ -4,6 +4,8 @@ on: [push]
 jobs:
   deploy:
     name: Deploy
+    env:
+      FIREBASE_CONFIG: ${{ secrets.FIREBASE_CONFIG }}
     runs-on: ubuntu-latest
     permissions:
       id-token: write # Needed for auth with Deno Deploy
