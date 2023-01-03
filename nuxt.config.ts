@@ -9,6 +9,7 @@ export default defineNuxtConfig({
           name: "description",
           content: "Husband vs Wife for the In-Season Cup",
         },
+        { name: "theme-color", content: "rgb(30 41 59)" },
       ],
       htmlAttrs: {
         lang: "en",
