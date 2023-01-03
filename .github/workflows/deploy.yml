@@ -26,6 +26,6 @@ jobs:
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
         with:
-          project: "the-in-season-cup-beta"
+          project: "the-in-season-cup"
           entrypoint: "server/index.ts" # TODO: update entrypoint
           root: ".output"
