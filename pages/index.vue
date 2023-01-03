@@ -17,7 +17,7 @@
 </template>
 
 <script setup>
-const { data: scores } = await useFetch("/api/firebase");
+const { data: scores } = await useLazyFetch("/api/firebase");
 const highestPoints = computed(() => {
   const points = scores.value.map((user) => user.points);
   return Math.max(...points);

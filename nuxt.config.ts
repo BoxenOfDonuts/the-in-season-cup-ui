@@ -10,6 +10,9 @@ export default defineNuxtConfig({
           content: "Husband vs Wife for the In-Season Cup",
         },
       ],
+      htmlAttrs: {
+        lang: "en",
+      },
     },
   },
   runtimeConfig: {

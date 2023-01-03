@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, getDocs } from "firebase/firestore";
+import { getFirestore, getDocs, collection } from "firebase/firestore/lite";
 
 export default defineEventHandler(async () => {
   const { firebaseConfig } = useRuntimeConfig();
