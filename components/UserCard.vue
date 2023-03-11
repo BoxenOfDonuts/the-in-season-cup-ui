@@ -2,7 +2,7 @@
   <section>
     <div
       class="flex justify-center -mb-7"
-      :class="{ 'hidden md:invisible md:block': !isLeader }"
+      :class="{ 'hidden md:invisible md:block': !user.hasCrown }"
     >
       <img class="h-24 w-24" src="/images/crown-96.png" alt="champion crown" />
     </div>
@@ -16,10 +16,6 @@ defineProps({
   user: {
     type: Object,
     default: () => {},
-  },
-  isLeader: {
-    type: Boolean,
-    default: false,
   },
 });
 </script>

@@ -18,5 +18,6 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     firebaseConfig: process.env.FIREBASE_CONFIG || "{}",
+    dev: process.env.NODE_ENV !== "production",
   },
 });

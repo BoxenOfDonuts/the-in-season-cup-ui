@@ -3,24 +3,21 @@
     <div
       class="text-blue-700 flex flex-col justify-center md:gap-12 md:flex-row"
     >
-      <UserCard
-        :user="scores[0]"
-        :is-leader="scores[0].points === highestPoints"
-      />
+      <UserCard :user="scores[0]" />
       <Versus />
-      <UserCard
-        :user="scores[1]"
-        :is-leader="scores[1].points === highestPoints"
-      />
+      <UserCard :user="scores[1]" />
     </div>
   </div>
 </template>
 
 <script setup>
-const { data: scores } = await useLazyFetch("/api/firebase");
-const highestPoints = computed(() => {
-  const points = scores.value.map((user) => user.points);
-  return Math.max(...points);
+const [{ data: scores }, { data: champ }] = await Promise.all([
+  useLazyFetch("/api/firebase/users"),
+  useLazyFetch("/api/firebase/champion"),
+]);
+
+scores.value.forEach((user) => {
+  user.hasCrown = user.teams.includes(champ.value.teamId);
 });
 </script>
 
