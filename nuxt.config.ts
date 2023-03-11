@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ["@nuxtjs/tailwindcss"],
+  modules: ["@nuxtjs/tailwindcss", "@nuxt/image-edge"],
   app: {
     head: {
       title: "The In-Season Cup",
@@ -18,5 +18,6 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     firebaseConfig: process.env.FIREBASE_CONFIG || "{}",
+    dev: process.env.NODE_ENV !== "production",
   },
 });
