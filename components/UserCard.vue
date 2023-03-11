@@ -5,13 +5,6 @@
       :class="{ 'hidden md:invisible md:block': !user.hasCrown }"
     >
       <img class="h-24 w-24" src="/images/crown-96.png" alt="champion crown" />
-      <!-- <NuxtImg
-        class="h-24 w-24"
-        src="/images/crown-96.png"
-        alt="champion crown"
-        format="webp"
-        sizes="sm:96px md:96px"
-      /> -->
     </div>
     <h1 class="text-9xl mb-4">{{ user.name }}</h1>
     <p class="text-blue-300 text-6xl">{{ user.points }}</p>
