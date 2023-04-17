@@ -11,9 +11,23 @@ const app = initializeApp(JSON.parse(firebaseConfig));
 const db = getFirestore(app);
 
 const DEFAULT_USERS = [
-  { name: "Joel", points: 1, teams: [19] },
-  { name: "Lian", points: 0, teams: [26] },
+  {
+    name: "Joel",
+    points: 1,
+    teams: [19],
+    pointChampion: true,
+    finalHolder: false,
+  },
+  {
+    name: "Lian",
+    points: 0,
+    teams: [26],
+    pointChampion: false,
+    finalHolder: true,
+  },
 ];
+
+// https://twitter.com/InSeasonCup/status/1578170440467755008?s=20
 
 const DEFAULT_CHAMP = {
   lastUpdateDate: { seconds: 1678543204, nanoseconds: 779000000 },
