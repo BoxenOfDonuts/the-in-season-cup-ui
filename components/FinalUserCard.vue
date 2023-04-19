@@ -27,11 +27,7 @@
         :alt="`${champ.name} logo`"
         class="h-24 w-24"
       />
-      <img
-        src="/images/stanley-cup.png"
-        alt="The Stanley Cup"
-        class="h-24 w-24"
-      />
+      <img src="/images/stanley-cup.png" alt="The Stanley Cup" class="w-24" />
     </div>
   </section>
 </template>
