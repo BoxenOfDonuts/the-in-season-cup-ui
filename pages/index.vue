@@ -12,8 +12,8 @@
 
 <script setup>
 const [{ data: scores }, { data: champ }] = await Promise.all([
-  useLazyFetch("/api/firebase/users"),
-  useLazyFetch("/api/firebase/champion"),
+  useFetch("/api/firebase/users"),
+  useFetch("/api/firebase/champion"),
 ]);
 
 scores.value.forEach((user) => {

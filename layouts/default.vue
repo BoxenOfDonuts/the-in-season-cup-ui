@@ -1,7 +1,7 @@
 <template>
   <div>
     <header class="shadow-sm bg-slate-800 mb-5">
-      <nav class="p-4 mx-auto flex gap-4 md:justify-between">
+      <nav class="p-4 mx-auto flex gap-4">
         <NuxtLink class="font-bold text-gray-200" to="/">
           The In-Season Cup
         </NuxtLink>
@@ -14,4 +14,8 @@
 
 <script setup></script>
 
-<style scoped></style>
+<style scoped>
+.router-link-active {
+  @apply border-b-4 border-blue-300 -mb-1;
+}
+</style>
