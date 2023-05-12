@@ -1,7 +1,7 @@
 <template>
   <div>
     <div
-      class="text-blue-700 flex flex-col justify-center md:gap-12 md:flex-row"
+      class="text-blue-700 flex flex-col justify-center md:gap-11 md:flex-row"
     >
       <FinalUserCard :user="scores[0]" :champ="champ" />
       <Versus />
@@ -11,9 +11,14 @@
 </template>
 
 <script setup>
+useHead({
+  title: "The In-Season Cup",
+  meta: [{ name: "description", content: "Current results of The Cup so far" }],
+});
+
 const [{ data: scores }, { data: champ }] = await Promise.all([
-  useLazyFetch("/api/firebase/users"),
-  useLazyFetch("/api/firebase/champion"),
+  useFetch("/api/firebase/users"),
+  useFetch("/api/firebase/champion"),
 ]);
 
 scores.value.forEach((user) => {
