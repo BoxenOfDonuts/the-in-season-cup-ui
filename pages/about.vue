@@ -1,7 +1,7 @@
 <template>
   <div class="mx-auto px-5 flex flex-col gap-5">
     <section>
-      <h1>The In-Season Cup</h1>
+      <h2>The In-Season Cup</h2>
       <p>
         The In-Season Cup was an idea discussed on the October 7th, 2021 episode
         of the
@@ -50,7 +50,12 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+useHead({
+  title: "About",
+  meta: [{ name: "description", content: "About the site" }],
+});
+</script>
 
 <style scoped>
 h1,
@@ -68,7 +73,8 @@ h2 {
 }
 
 p,
-li {
+li,
+blockquote {
   @apply text-left md:text-center text-white;
 }
 a {
