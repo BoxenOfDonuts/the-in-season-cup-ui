@@ -52,7 +52,7 @@
 
 <script setup>
 useHead({
-  title: "About",
+  titleTemplate: (titleChunk) => `${titleChunk}: About`,
   meta: [{ name: "description", content: "About the site" }],
 });
 </script>
