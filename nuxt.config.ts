@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  devtools: { enabled: true },
   modules: ["@nuxtjs/tailwindcss"],
   app: {
     head: {
@@ -23,9 +24,5 @@ export default defineNuxtConfig({
     public: {
       ENV: process.env.NODE_ENV,
     }
-  },
-
-  devtools: {
-    enabled: true,
   },
 });
