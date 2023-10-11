@@ -15,7 +15,7 @@ const DEFAULT_USERS = [
     name: "Joel",
     points: 1,
     teams: [19],
-    pointChampion: true,
+    pointChampion: false,
     finalHolder: false,
   },
   {
@@ -23,7 +23,21 @@ const DEFAULT_USERS = [
     points: 0,
     teams: [26],
     pointChampion: false,
-    finalHolder: true,
+    finalHolder: false,
+  },
+  {
+    name: "Denis",
+    points: 0,
+    teams: [22],
+    pointChampion: false,
+    finalHolder: false,
+  },
+  {
+    name: "Sam",
+    points: 0,
+    teams: [21],
+    pointChampion: false,
+    finalHolder: false,
   },
 ];
 
