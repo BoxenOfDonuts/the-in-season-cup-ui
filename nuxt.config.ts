@@ -23,6 +23,7 @@ export default defineNuxtConfig({
     dev: process.env.NODE_ENV !== "production",
     public: {
       ENV: process.env.NODE_ENV,
+      VERSION: process.env.npm_package_version,
     }
   },
 });
