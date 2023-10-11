@@ -1,5 +1,6 @@
 {
   "private": true,
+  "version": "0.2.0",
   "scripts": {
     "build": "nuxt build",
     "build:deno": "NITRO_PRESET=deno nuxt build",

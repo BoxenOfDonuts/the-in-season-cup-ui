@@ -4,8 +4,10 @@ import * as Sentry from '@sentry/browser';
 export default defineNuxtPlugin((nuxtApp) => {
     const runtimeConfig = useRuntimeConfig()
     const environment = runtimeConfig.public.ENV;
+    const release = runtimeConfig.public.VERSION;
 
     Sentry.init({
+        release: `the-in-season-cup-ui@${release}`,
         dsn: 'https://973d8773612d47b3a475783d06c756dd@o4505455379087360.ingest.sentry.io/4505455467560960',
         environment,
         integrations: [
