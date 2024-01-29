@@ -1,31 +1,22 @@
 <template>
   <div>
-    <div class="text-blue-700 relative flex flex-col justify-center md:gap-11 md:grid md:grid-rows-2 md:grid-cols-2">
-        <UserCard v-for="user in scores" :user="user" />
-        <div class="absolute flex items-center justify-center min-h-full inset-0">
-          <Versus class="hidden md:block" />
-        </div>
+    <div class="mx-auto px-5 flex flex-col gap-5 container">        
+      <h2 class="text-blue-300 mb-2 text-2xl md:text-5xl">
+        This Page is down for maintenance.
+      </h2>
+      <p class="text-left md:text-center text-white">
+        The NHL removed their old stats API and replaced it with a new one. I am currently working on updating the site to use the new API. Please check back later.
+      </p>
     </div>
   </div>
 </template>
-
+  
 <script setup>
-useHead({
-  title: "The In-Season Cup",
-  meta: [{ name: "description", content: "Current results of The Cup so far" }],
-});
-
-const { data: scores } = await useFetch("/api/firebase/users");
-
-// const [{ data: scores }, { data: champ }] = await Promise.all([
-//   useFetch("/api/firebase/users"),
-//   useFetch("/api/firebase/champion"),
-// ]);
-
-// scores.value.forEach((user) => {
-//   user.hasCrown = user.teams.includes(champ.value.teamId);
-//   // user.hasCrown = user.pointChampion || user.finalHolder;
-// });
+  useHead({
+    title: "The In-Season Cup",
+    meta: [{ name: "description", content: "Current results of The Cup so far" }],
+  });
 </script>
 
-<style scoped></style>
+<style scoped>
+</style>
