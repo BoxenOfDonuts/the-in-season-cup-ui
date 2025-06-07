@@ -17,11 +17,13 @@ jobs:
 
       # Not using npm? Change `npm ci` to `yarn install` or `pnpm i`
       - name: Install dependencies
-        run: yarn install
+        # run: yarn install
+        run: npm ci
 
       # Not using npm? Change `npm run build` to `yarn build` or `pnpm run build`
       - name: Build Nuxt
-        run: yarn build:deno
+        # run: yarn build:deno
+        run: npm run build:deno
 
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1

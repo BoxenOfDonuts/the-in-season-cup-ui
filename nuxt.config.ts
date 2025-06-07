@@ -17,6 +17,7 @@ export default defineNuxtConfig({
       },
     },
   },
+  compatibilityDate: '2025-06-07',
 
   runtimeConfig: {
     firebaseConfig: process.env.FIREBASE_CONFIG || "{}",
