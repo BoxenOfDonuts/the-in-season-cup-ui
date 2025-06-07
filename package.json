@@ -10,17 +10,13 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@nuxt/devtools": "^1.0.0-beta.0",
-    "@nuxtjs/eslint-config-typescript": "^12.0.0",
-    "@nuxtjs/tailwindcss": "^6.2.0",
-    "eslint": "^8.30.0",
+    "@nuxt/devtools": "^1.7.0",
+    "@nuxtjs/eslint-config-typescript": "^12.1.0",
+    "@nuxtjs/tailwindcss": "^6.14.0",
+    "eslint": "^8.57.1",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "nuxt": "3.7.3",
+    "nuxt": "^3.17.5",
     "prettier": "^2.8.1"
-  },
-  "dependencies": {
-    "@sentry/browser": "^7.57.0",
-    "firebase": "9.13.0"
   }
 }
