@@ -18,8 +18,5 @@
     "eslint-plugin-prettier": "^4.2.1",
     "nuxt": "^3.17.5",
     "prettier": "^2.8.1"
-  },
-  "dependencies": {
-    "@sentry/browser": "^7.57.0"
   }
 }
