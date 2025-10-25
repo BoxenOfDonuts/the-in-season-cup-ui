@@ -1,5 +1,2 @@
-User-agent: GPTBot
-User-agent: Claude-Web
-User-agent: CCBot
-User-agent: Google-Extended
-Disallow: /
+User-Agent: *
+Disallow:
