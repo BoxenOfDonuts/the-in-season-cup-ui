@@ -15,6 +15,7 @@
 <script setup></script>
 
 <style scoped>
+@reference "../assets/css/main.css";
 .router-link-active {
   @apply border-b-4 border-blue-300 -mb-1;
 }
