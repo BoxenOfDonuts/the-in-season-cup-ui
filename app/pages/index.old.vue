@@ -1,7 +1,8 @@
 <template>
   <div>
     <div class="text-blue-700 relative flex flex-col justify-center md:gap-11 md:grid md:grid-rows-2 md:grid-cols-2">
-        <UserCard v-for="user in scores" :user="user" />
+      <!-- eslint-disable vue/valid-v-for -->
+      <UserCard v-for="user in scores" :user="user" />
         <div class="absolute flex items-center justify-center min-h-full inset-0">
           <Versus class="hidden md:block" />
         </div>
